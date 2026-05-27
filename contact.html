@@ -29,10 +29,14 @@
 
       <form
         class="form-grid"
-        action="https://formspree.io/f/YOUR_FORM_ID"
+        name="booking"
         method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
         id="booking-form"
       >
+        <input type="hidden" name="form-name" value="booking">
+        <p style="display:none;"><input name="bot-field"></p>
         <div class="form-group">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" placeholder="Your name" required>
@@ -115,16 +119,6 @@
     </div>
   </footer>
 
-  <script>
-    const form = document.getElementById('booking-form');
-    form.addEventListener('submit', function(e) {
-      const action = form.getAttribute('action');
-      if (action.includes('YOUR_FORM_ID')) {
-        e.preventDefault();
-        alert('Form not yet connected. Please email mobydickmusicstudio@gmail.com or call +31 6 81 77 29 15 to book.');
-      }
-    });
-  </script>
 
 </body>
 </html>
