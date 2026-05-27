@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Session | Moby Dick Music Studio</title>
+  <meta name="description" content="Book a recording session at Moby Dick Music Studio, Delft.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Moby Dick <span>Music Studio</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gear.html">Gear</a></li>
+      <li><a href="info.html">Info</a></li>
+      <li><a href="contact.html" class="active">Book a Session</a></li>
+    </ul>
+  </nav>
+
+  <!-- BOOKING FORM -->
+  <section class="booking">
+    <div class="section-inner">
+      <p class="section-label">Get in Touch</p>
+      <h1 class="section-title">Book a Session</h1>
+      <div class="divider"></div>
+      <p style="color:var(--text-muted);max-width:500px;">Fill in the form below and we'll get back to you to sort out the details. Or call us directly on <a href="tel:+31681772915" style="color:var(--orange);text-decoration:none;">+31 6 81 77 29 15</a>.</p>
+
+      <form
+        class="form-grid"
+        action="https://formspree.io/f/YOUR_FORM_ID"
+        method="POST"
+        id="booking-form"
+      >
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" placeholder="+31 6 00 00 00 00">
+        </div>
+
+        <div class="form-group">
+          <label for="session-type">Session Type</label>
+          <select id="session-type" name="session_type">
+            <option value="" disabled selected>Select a type</option>
+            <option value="recording">Recording</option>
+            <option value="mixing">Mixing</option>
+            <option value="production">Production</option>
+            <option value="rehearsal">Rehearsal</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="date">Preferred Date</label>
+          <input type="date" id="date" name="preferred_date">
+        </div>
+
+        <div class="form-group">
+          <label for="duration">Estimated Duration</label>
+          <select id="duration" name="duration">
+            <option value="" disabled selected>Select duration</option>
+            <option value="half-day">Half day (4 hrs)</option>
+            <option value="full-day">Full day (8 hrs)</option>
+            <option value="multi-day">Multiple days</option>
+            <option value="unsure">Not sure yet</option>
+          </select>
+        </div>
+
+        <div class="form-group full">
+          <label for="message">Tell us about your project</label>
+          <textarea id="message" name="message" placeholder="Band name, genre, number of musicians, what you're working on..."></textarea>
+        </div>
+
+        <div class="form-submit">
+          <button type="submit" class="btn-submit">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- DIRECT CONTACT -->
+  <div class="cta-band" style="padding:64px 48px;">
+    <div class="section-inner" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;text-align:left;">
+      <div>
+        <p class="section-label" style="color:var(--mustard);">Address</p>
+        <p style="color:var(--cream);opacity:0.7;font-size:15px;margin-top:8px;">Schieweg 15D<br>2627AN Delft<br>Netherlands</p>
+      </div>
+      <div>
+        <p class="section-label" style="color:var(--mustard);">Phone</p>
+        <p style="margin-top:8px;font-size:15px;"><a href="tel:+31681772915" style="color:var(--cream);opacity:0.7;text-decoration:none;">+31 6 81 77 29 15</a></p>
+      </div>
+      <div>
+        <p class="section-label" style="color:var(--mustard);">Email</p>
+        <p style="margin-top:8px;font-size:15px;"><a href="mailto:mobydickmusicstudio@gmail.com" style="color:var(--cream);opacity:0.7;text-decoration:none;">mobydickmusicstudio@gmail.com</a></p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <a href="index.html" class="footer-logo">Moby Dick <span>Music Studio</span></a>
+    <div class="footer-info">
+      Schieweg 15D, 2627AN Delft<br>
+      <a href="tel:+31681772915">+31 6 81 77 29 15</a> &nbsp;·&nbsp;
+      <a href="mailto:mobydickmusicstudio@gmail.com">mobydickmusicstudio@gmail.com</a>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('booking-form');
+    form.addEventListener('submit', function(e) {
+      const action = form.getAttribute('action');
+      if (action.includes('YOUR_FORM_ID')) {
+        e.preventDefault();
+        alert('Form not yet connected. Please email mobydickmusicstudio@gmail.com or call +31 6 81 77 29 15 to book.');
+      }
+    });
+  </script>
+
+</body>
+</html>
