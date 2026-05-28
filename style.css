@@ -108,6 +108,38 @@ nav {
   color: var(--mustard);
 }
 
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 24px;
+  padding-left: 24px;
+  border-left: 1px solid rgba(255,255,255,0.15);
+}
+
+.lang-switcher a {
+  color: var(--cream);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  opacity: 0.4;
+  transition: opacity 0.2s;
+}
+
+.lang-switcher a:hover { opacity: 0.8; }
+
+.lang-switcher a.active {
+  opacity: 1;
+  color: var(--mustard);
+}
+
+.lang-switcher span {
+  color: var(--cream);
+  opacity: 0.2;
+  font-size: 11px;
+}
+
 /* ── HERO ── */
 .hero {
   min-height: 100vh;

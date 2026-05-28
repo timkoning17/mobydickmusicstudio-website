@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sessie Boeken | Moby Dick Music Studio</title>
+  <meta name="description" content="Boek een opnamesessie bij Moby Dick Music Studio, Delft.">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <nav>
+    <a href="/nl/" class="nav-logo"><img src="../images/logo.png" alt="Moby Dick logo">Moby Dick <span>Music Studio</span></a>
+    <ul class="nav-links">
+      <li><a href="/nl/">Home</a></li>
+      <li><a href="/nl/gear.html">Gear</a></li>
+      <li><a href="/nl/info.html">Info</a></li>
+      <li><a href="/nl/contact.html" class="active">Sessie Boeken</a></li>
+    </ul>
+      <div class="lang-switcher">
+        <a href="/contact.html">EN</a>
+        <span>|</span>
+        <a href="#" class="active">NL</a>
+      </div>
+    </nav>
+
+  <section class="booking">
+    <div class="section-inner">
+      <p class="section-label">Neem Contact Op</p>
+      <h1 class="section-title">Sessie Boeken</h1>
+      <div class="divider"></div>
+      <p style="color:var(--text-muted);max-width:500px;">Vul het formulier in en we nemen zo snel mogelijk contact met je op. Of bel ons direct op <a href="tel:+31681772915" style="color:var(--orange);text-decoration:none;">+31 6 81 77 29 15</a>.</p>
+
+      <form
+        class="form-grid"
+        name="booking-nl"
+        method="POST"
+        action="https://mobydickmusicstudio.com/nl/bedankt.html"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+      >
+        <input type="hidden" name="form-name" value="booking-nl">
+        <p style="display:none;"><input name="bot-field"></p>
+
+        <div class="form-group">
+          <label for="name">Naam</label>
+          <input type="text" id="name" name="name" placeholder="Je naam" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="jouw@email.nl" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Telefoon</label>
+          <input type="tel" id="phone" name="phone" placeholder="+31 6 00 00 00 00">
+        </div>
+
+        <div class="form-group">
+          <label for="session-type">Type Sessie</label>
+          <select id="session-type" name="session_type">
+            <option value="" disabled selected>Kies een type</option>
+            <option value="opname">Opname</option>
+            <option value="mixen">Mixen</option>
+            <option value="productie">Productie</option>
+            <option value="repetitie">Repetitie</option>
+            <option value="anders">Anders</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="date">Gewenste Datum</label>
+          <input type="date" id="date" name="preferred_date">
+        </div>
+
+        <div class="form-group">
+          <label for="duration">Geschatte Duur</label>
+          <select id="duration" name="duration">
+            <option value="" disabled selected>Kies een duur</option>
+            <option value="halve-dag">Halve dag (4 uur)</option>
+            <option value="hele-dag">Hele dag (8 uur)</option>
+            <option value="meerdere-dagen">Meerdere dagen</option>
+            <option value="nog-niet-zeker">Nog niet zeker</option>
+          </select>
+        </div>
+
+        <div class="form-group full">
+          <label for="message">Vertel ons over je project</label>
+          <textarea id="message" name="message" placeholder="Bandnaam, genre, aantal muzikanten, waar je aan werkt..."></textarea>
+        </div>
+
+        <div class="form-submit">
+          <button type="submit" class="btn-submit">Bericht Sturen</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <div class="cta-band" style="padding:64px 48px;">
+    <div class="section-inner" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;text-align:left;">
+      <div>
+        <p class="section-label" style="color:var(--mustard);">Adres</p>
+        <p style="color:var(--cream);opacity:0.7;font-size:15px;margin-top:8px;">Schieweg 15D<br>2627AN Delft<br>Nederland</p>
+      </div>
+      <div>
+        <p class="section-label" style="color:var(--mustard);">Telefoon</p>
+        <p style="margin-top:8px;font-size:15px;"><a href="tel:+31681772915" style="color:var(--cream);opacity:0.7;text-decoration:none;">+31 6 81 77 29 15</a></p>
+      </div>
+      <div>
+        <p class="section-label" style="color:var(--mustard);">E-mail</p>
+        <p style="margin-top:8px;font-size:15px;"><a href="mailto:mobydickmusicstudio@gmail.com" style="color:var(--cream);opacity:0.7;text-decoration:none;">mobydickmusicstudio@gmail.com</a></p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <a href="/nl/" class="footer-logo">Moby Dick <span>Music Studio</span></a>
+    <div class="footer-info">
+      Schieweg 15D, 2627AN Delft<br>
+      <a href="tel:+31681772915">+31 6 81 77 29 15</a> &nbsp;·&nbsp;
+      <a href="mailto:mobydickmusicstudio@gmail.com">mobydickmusicstudio@gmail.com</a>
+    </div>
+  </footer>
+
+</body>
+</html>
